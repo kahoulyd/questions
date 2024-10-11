@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quelques questions ...</title>
+    <title>Quiz Débutant en Python, JavaScript, PHP</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,12 +58,32 @@
             padding: 10px;
             margin-bottom: 8px;
             border-radius: 4px;
-            cursor: pointer;
+        }
+
+        .options li input {
+            margin-right: 10px;
         }
 
         .correct {
-            background-color: #d4edda;
-            color: #155724;
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+}
+
+.correct-answer {
+    background-color: #c3e6cb;
+    border-left: 5px solid #28a745;
+}
+
+
+        #score {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
         }
 
         footer {
@@ -72,149 +92,251 @@
             font-size: 14px;
             color: #666;
         }
+
+        #timer {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Quelques questions ...</h1>
+        <h1>Quiz : Python, JavaScript, PHP</h1>
 
-        <!-- Python Section -->
-        <div class="section">
-            <h2>Python</h2>
+        <div id="timer">Temps restant : 15:00</div>
 
-            <div class="question">
-                <p>1. Comment afficher "Hello, World!" en Python ?</p>
-                <ul class="options">
-                    <li>A. <code>echo 'Hello, World!'</code></li>
-                    <li>B. <code>System.out.println('Hello, World!')</code></li>
-                    <li class="correct">C. <code>print('Hello, World!')</code></li>
-                    <li>D.<code> Apprends à parler Python, puis dis-le !</code></li>
-                </ul>
+        <form id="quizForm">
+            <!-- Python Section -->
+            <div class="section">
+                <h2>Python</h2>
+
+                <div class="question">
+                    <p>1. Comment afficher "Hello, World!" en Python ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="A"> A. echo 'Hello, World!'</li>
+                        <li><input type="radio" name="q1" value="B"> B. System.out.println('Hello, World!')</li>
+                        <li><input type="radio" name="q1" value="C"> C. print('Hello, World!')</li>
+                        <li><input type="radio" name="q1" value="D"> D. Apprends à parler Python, puis dis-le !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>2. Comment déclarer une fonction en Python ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="A"> A. def ma_fonction():</li>
+                        <li><input type="radio" name="q2" value="B"> B. function ma_fonction() {}</li>
+                        <li><input type="radio" name="q2" value="C"> C. fun ma_fonction() {}</li>
+                        <li><input type="radio" name="q2" value="D"> D. Crie fort "Je veux une fonction !"</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>3. Comment créer une liste en Python ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q3" value="A"> A. list = []</li>
+                        <li><input type="radio" name="q3" value="B"> B. ma_liste = [1, 2, 3]</li>
+                        <li><input type="radio" name="q3" value="C"> C. array(1, 2, 3)</li>
+                        <li><input type="radio" name="q3" value="D"> D. Télécharge-la sur Internet !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>4. Quelle est la bonne façon d’importer un module en Python ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q4" value="A"> A. import math</li>
+                        <li><input type="radio" name="q4" value="B"> B. include(math)</li>
+                        <li><input type="radio" name="q4" value="C"> C. #include math.h</li>
+                        <li><input type="radio" name="q4" value="D"> D. Demande gentiment à Python de l'importer pour toi !</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="question">
-                <p>2. Comment déclarer une fonction en Python ?</p>
-                <ul class="options">
-                    <li>A. <code>def ma_fonction():</code></li>
-                    <li>B. <code>function ma_fonction() {}</code></li>
-                    <li>C. <code>fun ma_fonction() {}</code></li>
-                    <li>D.<code> Crie fort "Je veux une fonction !" </code></li>
-                </ul>
+            <!-- JavaScript Section -->
+            <div class="section">
+                <h2>JavaScript</h2>
+
+                <div class="question">
+                    <p>1. Comment afficher "Hello, World!" en JavaScript ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q5" value="A"> A. print('Hello, World!')</li>
+                        <li><input type="radio" name="q5" value="B"> B. console.log('Hello, World!')</li>
+                        <li><input type="radio" name="q5" value="C"> C. alert('Hello, World!')</li>
+                        <li><input type="radio" name="q5" value="D"> D. Envoie un SMS à tout le monde !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>2. Comment déclarer une variable en JavaScript ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q6" value="A"> A. int a = 5;</li>
+                        <li><input type="radio" name="q6" value="B"> B. let a = 5;</li>
+                        <li><input type="radio" name="q6" value="C"> C. var a = 5;</li>
+                        <li><input type="radio" name="q6" value="D"> D. Dis à l'ordinateur de se rappeler !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>3. Comment créer une fonction en JavaScript ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q7" value="A"> A. def maFonction()</li>
+                        <li><input type="radio" name="q7" value="B"> B. function maFonction() {}</li>
+                        <li><input type="radio" name="q7" value="C"> C. fun maFonction()</li>
+                        <li><input type="radio" name="q7" value="D"> D. Écris un poème à propos des fonctions !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>4. Quelle est la différence entre <code>==</code> et <code>===</code> en JavaScript ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q8" value="A"> A. == compare la valeur uniquement</li>
+                        <li><input type="radio" name="q8" value="B"> B. === compare la valeur et le type</li>
+                        <li><input type="radio" name="q8" value="C"> C. Les deux font la même chose</li>
+                        <li><input type="radio" name="q8" value="D"> D. L'un est juste plus cool que l'autre !</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="question">
-                <p>3. Comment créer une liste en Python ?</p>
-                <ul class="options">
-                    <li>A. <code>list = []</code></li>
-                    <li class="correct">B. <code>ma_liste = [1, 2, 3]</code></li>
-                    <li>C. <code>array(1, 2, 3)</code></li>
-                    <li>D. <code>Télécharge-la sur Internet ! </code></li>
-                </ul>
+            <!-- PHP Section -->
+            <div class="section">
+                <h2>PHP</h2>
+
+                <div class="question">
+                    <p>1. Comment afficher "Hello, World!" en PHP ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q9" value="A"> A. &lt;?php echo 'Hello, World!'; ?&gt;</li>
+                        <li><input type="radio" name="q9" value="B"> B. console.log('Hello, World!')</li>
+                        <li><input type="radio" name="q9" value="C"> C. print('Hello, World!')</li>
+                        <li><input type="radio" name="q9" value="D"> D. Mets-le sur Instagram et attends les "likes" !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>2. Comment déclarer une variable en PHP ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q10" value="A"> A. $a = 5;</li>
+                        <li><input type="radio" name="q10" value="B"> B. var a = 5;</li>
+                        <li><input type="radio" name="q10" value="C"> C. int a = 5;</li>
+                        <li><input type="radio" name="q10" value="D"> D. Envoie un mail à ta variable !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>3. Comment créer une fonction en PHP ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q11" value="A"> A. def maFonction()</li>
+                        <li><input type="radio" name="q11" value="B"> B. function maFonction() {}</li>
+                        <li><input type="radio" name="q11" value="C"> C. fun maFonction()</li>
+                        <li><input type="radio" name="q11" value="D"> D. Fais un voeu en regardant le ciel !</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>4. Comment accéder à un élément d'un tableau associatif en PHP ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q12" value="A"> A. array['clé']</li>
+                        <li><input type="radio" name="q12" value="B"> B. $array['clé']</li>
+                        <li><input type="radio" name="q12" value="C"> C. array.key</li>
+                        <li><input type="radio" name="q12" value="D"> D. Télépathie !</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="question">
-                <p>4. Quelle est la bonne façon d’importer un module en Python ?</p>
-                <ul class="options">
-                    <li>A. <code>import math</code></li>
-                    <li>B. <code>include(math)</code></li>
-                    <li>C. <code>#include math.h</code></li>
-                    <li>D. <code> Demande gentiment à Python de l'importer pour toi !</code></li>
-                </ul>
-            </div>
-        </div>
+            <button type="submit">Soumettre</button>
+        </form>
 
-        <!-- JavaScript Section -->
-        <div class="section">
-            <h2>JavaScript</h2>
-
-            <div class="question">
-                <p>1. Comment afficher "Hello, World!" en JavaScript ?</p>
-                <ul class="options">
-                    <li>A. <code>print('Hello, World!')</code></li>
-                    <li class="correct">B. <code>console.log('Hello, World!')</code></li>
-                    <li>C. <code>alert('Hello, World!')</code></li>
-                    <li>D. <code>Envoie un SMS à tout le monde ! </code></li>
-                </ul>
-            </div>
-
-            <div class="question">
-                <p>2. Comment déclarer une variable en JavaScript ?</p>
-                <ul class="options">
-                    <li>A. <code>int a = 5;</code></li>
-                    <li class="correct">B. <code>let a = 5;</code></li>
-                    <li>C. <code>var a = 5;</code></li>
-                    <li>D. <code> Dis à l'ordinateur de se rappeler ! </code></li>
-                </ul>
-            </div>
-
-            <div class="question">
-                <p>3. Comment créer une fonction en JavaScript ?</p>
-                <ul class="options">
-                    <li>A. <code>def maFonction()</code></li>
-                    <li class="correct">B. <code>function maFonction() {}</code></li>
-                    <li>C. <code>fun maFonction()</code></li>
-                    <li>D.<code> Écris un poème à propos des fonctions !</code></li>
-                </ul>
-            </div>
-
-            <div class="question">
-                <p>4. Quelle est la différence entre <code>==</code> et <code>===</code> en JavaScript ?</p>
-                <ul class="options">
-                    <li>A. <code>==</code> compare la valeur uniquement</li>
-                    <li>B. <code>===</code> compare la valeur et le type</li>
-                    <li>C. Les deux font la même chose</li>
-                    <li>D. <code>L'un est juste plus cool que l'autre !</code></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- PHP Section -->
-        <div class="section">
-            <h2>PHP</h2>
-
-            <div class="question">
-                <p>1. Comment afficher "Hello, World!" en PHP ?</p>
-                <ul class="options">
-                    <li class="correct">A. <code>&lt;?php echo 'Hello, World!'; ?&gt;</code></li>
-                    <li>B. <code>console.log('Hello, World!')</code></li>
-                    <li>C. <code>print('Hello, World!')</code></li>
-                    <li>D. <code>Mets-le sur Instagram et attends les "likes" !</code></li>
-                </ul>
-            </div>
-
-            <div class="question">
-                <p>2. Comment déclarer une variable en PHP ?</p>
-                <ul class="options">
-                    <li>A. <code>$maVariable = 5;</code></li>
-                    <li class="correct">B. <code>$a = 5;</code></li>
-                    <li>C. <code>let a = 5;</code></li>
-                    <li>D. <code>Demande à ton ordinateur de se souvenir de la variable !</code></li>
-                </ul>
-            </div>
-
-            <div class="question">
-                <p>3. Comment créer une fonction en PHP ?</p>
-                <ul class="options">
-                    <li>A. <code>function maFonction() {}</code></li>
-                    <li class="correct">B. <code>function nomFonction() {}</code></li>
-                    <li>C. <code>def maFonction() {}</code></li>
-                    <li>D. <code>Invoque un sort magique !</code></li>
-                </ul>
-            </div>
-
-            <div class="question">
-                <p>4. Comment vérifier si une variable est définie en PHP ?</p>
-                <ul class="options">
-                    <li>A. <code>isset($var)</code></li>
-                    <li>B. <code>defined($var)</code></li>
-                    <li>C. <code>exists($var)</code></li>
-                    <li>D. <code>Demande à la variable si elle existe !</code></li>
-                </ul>
-            </div>
-        </div>
+        <div id="score"></div>
     </div>
 
     <footer>
         © 2024 - Les Fées Marraines
     </footer>
+
+    <script>
+        let timerElement = document.getElementById('timer');
+        let timeLeft = 15 * 60; // 15 minutes en secondes
+        let timer = setInterval(function() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            timerElement.textContent = "Temps restant : " + minutes + ":" + seconds;
+            timeLeft--;
+
+            // Si le temps est écoulé
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                calculateScore();
+            }
+        }, 1000);
+
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            calculateScore();
+        });
+
+        function calculateScore() {
+    clearInterval(timer); // Arrête le timer s'il est encore en cours
+
+    let score = 0;
+    const correctAnswers = {
+        q1: 'C', // Python Hello World
+        q2: 'A', // Python Function
+        q3: 'B', // Python List
+        q4: 'A', // Python Module
+        q5: 'B', // JS Hello World
+        q6: 'B', // JS Variable
+        q7: 'B', // JS Function
+        q8: 'B', // JS == vs ===
+        q9: 'A', // PHP Hello World
+        q10: 'A', // PHP Variable
+        q11: 'B', // PHP Function
+        q12: 'B'  // PHP Array access
+    };
+
+    const formData = new FormData(document.getElementById('quizForm'));
+
+    for (let [question, answer] of formData.entries()) {
+        const correctAnswer = correctAnswers[question];
+        const questionElement = document.querySelector(`input[name="${question}"][value="${answer}"]`).parentElement;
+
+        if (answer === correctAnswer) {
+            score++;
+            questionElement.classList.add('correct');
+        } else {
+            // Marquer la mauvaise réponse en rouge
+            questionElement.classList.add('incorrect');
+
+             // Trouver et marquer la bonne réponse en vert
+            const correctElement = document.querySelector(`input[name="${question}"][value="${correctAnswer}"]`).parentElement;
+            correctElement.classList.add('correct-answer');
+            
+
+        }
+                   
+                
+    }
+
+    document.getElementById('score').textContent = "Votre score est : " + score + "/12";
+}
+
+    </script>
 </body>
+</html>
