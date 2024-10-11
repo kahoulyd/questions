@@ -272,7 +272,7 @@
 
     <script>
         let timerElement = document.getElementById('timer');
-        let timeLeft = 15 * 60; // 15 minutes en secondes
+        let timeLeft = 0.1 * 60; // 15 minutes en secondes
         let timer = setInterval(function() {
             let minutes = Math.floor(timeLeft / 60);
             let seconds = timeLeft % 60;
@@ -326,13 +326,19 @@
 
              // Trouver et marquer la bonne réponse en vert
             const correctElement = document.querySelector(`input[name="${question}"][value="${correctAnswer}"]`).parentElement;
-            correctElement.classList.add('correct-answer');
-            
-
+            correctElement.classList.add('correct-answer');         
         }
+       
                    
                 
     }
+     // Vérifier les questions non répondues
+     for (const question in correctAnswers) {
+                if (!formData.has(question)) {
+                    const correctElement = document.querySelector(`input[name="${question}"][value="${correctAnswers[question]}"]`).parentElement;
+                    correctElement.classList.add('correct-answer'); // Afficher la bonne réponse
+                }
+            }
 
     document.getElementById('score').textContent = "Votre score est : " + score + "/12";
 }
