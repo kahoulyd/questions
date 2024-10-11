@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quelques questions ...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+
+        .question {
+            margin: 10px 0;
+        }
+
+        .question p {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 5px solid #007BFF;
+            border-radius: 4px;
+            margin: 0;
+        }
+
+        .options {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .options li {
+            background-color: #e7f3ff;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quelques questions ...</h1>
+
+        <!-- Python Section -->
+        <div class="section">
+            <h2>Python</h2>
+
+            <div class="question">
+                <p>1. Comment afficher "Hello, World!" en Python ?</p>
+                <ul class="options">
+                    <li>A. <code>echo 'Hello, World!'</code></li>
+                    <li>B. <code>System.out.println('Hello, World!')</code></li>
+                    <li class="correct">C. <code>print('Hello, World!')</code></li>
+                    <li>D.<code> Apprends à parler Python, puis dis-le !</code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>2. Comment déclarer une fonction en Python ?</p>
+                <ul class="options">
+                    <li>A. <code>def ma_fonction():</code></li>
+                    <li>B. <code>function ma_fonction() {}</code></li>
+                    <li>C. <code>fun ma_fonction() {}</code></li>
+                    <li>D.<code> Crie fort "Je veux une fonction !" </code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>3. Comment créer une liste en Python ?</p>
+                <ul class="options">
+                    <li>A. <code>list = []</code></li>
+                    <li class="correct">B. <code>ma_liste = [1, 2, 3]</code></li>
+                    <li>C. <code>array(1, 2, 3)</code></li>
+                    <li>D. <code>Télécharge-la sur Internet ! </code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>4. Quelle est la bonne façon d’importer un module en Python ?</p>
+                <ul class="options">
+                    <li>A. <code>import math</code></li>
+                    <li>B. <code>include(math)</code></li>
+                    <li>C. <code>#include math.h</code></li>
+                    <li>D. <code> Demande gentiment à Python de l'importer pour toi !</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- JavaScript Section -->
+        <div class="section">
+            <h2>JavaScript</h2>
+
+            <div class="question">
+                <p>1. Comment afficher "Hello, World!" en JavaScript ?</p>
+                <ul class="options">
+                    <li>A. <code>print('Hello, World!')</code></li>
+                    <li class="correct">B. <code>console.log('Hello, World!')</code></li>
+                    <li>C. <code>alert('Hello, World!')</code></li>
+                    <li>D. <code>Envoie un SMS à tout le monde ! </code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>2. Comment déclarer une variable en JavaScript ?</p>
+                <ul class="options">
+                    <li>A. <code>int a = 5;</code></li>
+                    <li class="correct">B. <code>let a = 5;</code></li>
+                    <li>C. <code>var a = 5;</code></li>
+                    <li>D. <code> Dis à l'ordinateur de se rappeler ! </code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>3. Comment créer une fonction en JavaScript ?</p>
+                <ul class="options">
+                    <li>A. <code>def maFonction()</code></li>
+                    <li class="correct">B. <code>function maFonction() {}</code></li>
+                    <li>C. <code>fun maFonction()</code></li>
+                    <li>D.<code> Écris un poème à propos des fonctions !</code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>4. Quelle est la différence entre <code>==</code> et <code>===</code> en JavaScript ?</p>
+                <ul class="options">
+                    <li>A. <code>==</code> compare la valeur uniquement</li>
+                    <li>B. <code>===</code> compare la valeur et le type</li>
+                    <li>C. Les deux font la même chose</li>
+                    <li>D. <code>L'un est juste plus cool que l'autre !</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PHP Section -->
+        <div class="section">
+            <h2>PHP</h2>
+
+            <div class="question">
+                <p>1. Comment afficher "Hello, World!" en PHP ?</p>
+                <ul class="options">
+                    <li class="correct">A. <code>&lt;?php echo 'Hello, World!'; ?&gt;</code></li>
+                    <li>B. <code>console.log('Hello, World!')</code></li>
+                    <li>C. <code>print('Hello, World!')</code></li>
+                    <li>D. <code>Mets-le sur Instagram et attends les "likes" !</code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>2. Comment déclarer une variable en PHP ?</p>
+                <ul class="options">
+                    <li>A. <code>$maVariable = 5;</code></li>
+                    <li class="correct">B. <code>$a = 5;</code></li>
+                    <li>C. <code>let a = 5;</code></li>
+                    <li>D. <code>Demande à ton ordinateur de se souvenir de la variable !</code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>3. Comment créer une fonction en PHP ?</p>
+                <ul class="options">
+                    <li>A. <code>function maFonction() {}</code></li>
+                    <li class="correct">B. <code>function nomFonction() {}</code></li>
+                    <li>C. <code>def maFonction() {}</code></li>
+                    <li>D. <code>Invoque un sort magique !</code></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>4. Comment vérifier si une variable est définie en PHP ?</p>
+                <ul class="options">
+                    <li>A. <code>isset($var)</code></li>
+                    <li>B. <code>defined($var)</code></li>
+                    <li>C. <code>exists($var)</code></li>
+                    <li>D. <code>Demande à la variable si elle existe !</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 - Les Fées Marraines
+    </footer>
+</body>
