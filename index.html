@@ -259,7 +259,29 @@
                     </ul>
                 </div>
             </div>
-
+            <div class="section">
+                <h2>Contexte d'application ou fonctionnel</h2>
+            
+                <div class="question">
+                    <p>1. Vous travaillez sur un projet web nécessitant des animations fluides et une interaction dynamique avec l'utilisateur. Quel langage devriez-vous utiliser ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q13" value="A"> A. JavaScript</li>
+                        <li><input type="radio" name="q13" value="B"> B. Python</li>
+                        <li><input type="radio" name="q13" value="C"> C. PHP</li>
+                        <li><input type="radio" name="q13" value="D"> D. Créez des marionnettes et jouez les animations vous-même !</li>
+                    </ul>
+                </div>
+            
+                <div class="question">
+                    <p>2. Vous devez développer un script pour analyser des données volumineuses et effectuer des calculs scientifiques complexes. Quel langage serait le plus adapté ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q14" value="A"> A. Python</li>
+                        <li><input type="radio" name="q14" value="B"> B. JavaScript</li>
+                        <li><input type="radio" name="q14" value="C"> C. PHP</li>
+                        <li><input type="radio" name="q14" value="D"> D. Embauchez un mathématicien et laissez-le faire les calculs !</li>
+                    </ul>
+                </div>
+            </div>
             <button type="submit">Soumettre</button>
         </form>
 
@@ -267,12 +289,12 @@
     </div>
 
     <footer>
-        © 2024 - Les Fées Marraines
+        © 2025 - Les Fées Marraines
     </footer>
 
     <script>
         let timerElement = document.getElementById('timer');
-        let timeLeft = 15 * 60; // 15 minutes en secondes
+        let timeLeft = 20 * 60; // 15 minutes en secondes
         let timer = setInterval(function() {
             let minutes = Math.floor(timeLeft / 60);
             let seconds = timeLeft % 60;
@@ -308,7 +330,9 @@
         q9: 'A', // PHP Hello World
         q10: 'A', // PHP Variable
         q11: 'B', // PHP Function
-        q12: 'B'  // PHP Array access
+        q12: 'B',  // PHP Array access
+        q13: 'A',
+        q14: 'A'
     };
 
     const formData = new FormData(document.getElementById('quizForm'));
